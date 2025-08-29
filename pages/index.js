@@ -4,7 +4,7 @@ import { MongoClient } from 'mongodb';
 import MeetupList from '../components/meetups/MeetupList';
 
 
-function HomePage(props) {
+const HomePage = (props) => {
 
     return (
         <Fragment>
@@ -19,7 +19,7 @@ function HomePage(props) {
     );
 }
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
     //fetch some dATA
     const client = await MongoClient.connect(
         'mongodb+srv://iamagugbueikenna:Jesuschrist4ever@cluster1.qbbirro.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster1'
