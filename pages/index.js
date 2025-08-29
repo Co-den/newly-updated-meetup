@@ -22,8 +22,8 @@ function HomePage(props) {
 export async function getStaticProps() {
     //fetch some dATA
     const client = await MongoClient.connect(
-        'mongodb://0.0.0.0:27017/meetupstore'
-    );//'mongodb+srv://iamagugbueikenna:Jesuschrist4ever@cluster0.ganuqut.mongodb.net/meetup?retryWrites=true&w=majority');
+        'mongodb+srv://iamagugbueikenna:Jesuschrist4ever@cluster1.qbbirro.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster1'
+    );
     const db = client.db();
 
     const meetupsCollection = db.collection('meetups');
